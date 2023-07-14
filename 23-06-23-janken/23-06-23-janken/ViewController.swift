@@ -21,35 +21,49 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         resultLabel.text = "じゃんけんスタート"
     }
-
+    
     @IBAction func pressedRockButton(_ sender: UIButton) {
         playerImageView.image = UIImage(named: "rock")
-        returnOpponentResult(hand: 0)
+        returnOpponentResult(Hand.rock)
     }
     @IBAction func pressedScissorsButton(_ sender: UIButton) {
         playerImageView.image = UIImage(named: "scissors")
-        returnOpponentResult(hand: 1)
+        returnOpponentResult(Hand.scissors)
     }
     @IBAction func pressedPaperButton(_ sender: UIButton) {
         playerImageView.image = UIImage(named: "paper")
-        returnOpponentResult(hand: 2)
+        returnOpponentResult(Hand.paper)
     }
     
-    func returnOpponentResult(hand: Int) {
-        let opponentHand = Int.random(in: 0...2)
-        if opponentHand == 0 {
-            opponentImageView.image = UIImage(named: "rock")
-        } else if opponentHand == 1 {
-            opponentImageView.image = UIImage(named: "scissors")
-        } else if opponentHand == 2 {
-            opponentImageView.image = UIImage(named: "paper")
+    func returnOpponentResult(_ hand: Hand) {
+        let opponentHand = Hand.random
+        
+        switch opponentHand {
+        case Hand.rock:
+            opponentImageView.image = UIImage(named: "\(Hand.rock)")
+        case Hand.scissors:
+            opponentImageView.image = UIImage(named: "\(Hand.scissors)")
+        case Hand.paper:
+            opponentImageView.image = UIImage(named: "\(Hand.paper)")
         }
+        
         if opponentHand == hand {
             resultLabel.text = "あいこです"
-        } else if (opponentHand == 0 && hand == 1) || (opponentHand == 1 && hand == 2) || (opponentHand == 2 && hand == 0) {
+        } else if (opponentHand == .rock && hand == .scissors) || (opponentHand == .scissors && hand == .paper) || (opponentHand == .paper && hand == .rock) {
             resultLabel.text = "あなたの負けです"
         } else {
             resultLabel.text = "あなたの勝ちです"
         }
+    }
+}
+
+enum Hand: Int {
+    case rock
+    case scissors
+    case paper
+    
+    static var random: Self {
+        let randomValue = Int.random(in: 0..<3)
+        return Hand(rawValue: randomValue)!
     }
 }
