@@ -12,9 +12,9 @@ class ViewController: UIViewController {
     @IBOutlet private weak var resultLabel: UILabel!
     @IBOutlet private weak var opponentImageView: UIImageView!
     @IBOutlet private weak var playerImageView: UIImageView!
-    @IBOutlet weak var rockButton: UIButton!
-    @IBOutlet weak var scissorsButton: UIButton!
-    @IBOutlet weak var paperButton: UIButton!
+    @IBOutlet private weak var rockButton: UIButton!
+    @IBOutlet private weak var scissorsButton: UIButton!
+    @IBOutlet private weak var paperButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -24,61 +23,75 @@
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jFq-cY-i16">
-                                <rect key="frame" x="146.66666666666666" y="468" width="100" height="100"/>
+                                <rect key="frame" x="146.66666666666666" y="518" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="VFm-wN-cfc" userLabel="height = 100"/>
                                     <constraint firstAttribute="width" constant="100" id="nkR-wD-TTA" userLabel="width = 100"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJ0-wW-izK">
-                                <rect key="frame" x="158.66666666666666" y="683" width="76" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="チョキ"/>
-                                <connections>
-                                    <action selector="pressedScissorsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Slq-eQ-nkE"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zci-IX-DJC">
-                                <rect key="frame" x="274" y="683" width="59" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="パー"/>
-                                <connections>
-                                    <action selector="pressedPaperButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2pW-E6-JNd"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pc2-Nc-l11">
-                                <rect key="frame" x="60" y="683" width="59" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="グー"/>
-                                <connections>
-                                    <action selector="pressedRockButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="96O-i7-RTE"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P50-ZT-11O">
-                                <rect key="frame" x="175.66666666666666" y="159" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="じゃんけんスタート" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P50-ZT-11O">
+                                <rect key="frame" x="118.66666666666669" y="159" width="156" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="W2g-m5-N9S">
+                                <rect key="frame" x="43.666666666666657" y="693.66666666666663" width="306" height="34.333333333333371"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pc2-Nc-l11">
+                                        <rect key="frame" x="0.0" y="0.0" width="76" height="34.333333333333336"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="グー">
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="pressedRockButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="96O-i7-RTE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJ0-wW-izK">
+                                        <rect key="frame" x="115" y="0.0" width="76" height="34.333333333333336"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="チョキ">
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="pressedScissorsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Slq-eQ-nkE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zci-IX-DJC">
+                                        <rect key="frame" x="230" y="0.0" width="76" height="34.333333333333336"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="パー">
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="pressedPaperButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2pW-E6-JNd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="gJ0-wW-izK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Pc2-Nc-l11" secondAttribute="trailing" constant="8" symbolic="YES" id="15L-bc-dnq"/>
                             <constraint firstItem="P50-ZT-11O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Ax-Ir-0bz"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jFq-cY-i16" secondAttribute="bottom" constant="250" id="1xX-nM-1Uk"/>
-                            <constraint firstItem="Pc2-Nc-l11" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="5ob-HV-h1P"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jFq-cY-i16" secondAttribute="bottom" constant="200" id="1xX-nM-1Uk"/>
                             <constraint firstItem="P50-ZT-11O" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="9iG-Oz-FbW"/>
                             <constraint firstItem="tWu-WC-BTu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="DyH-fa-H6V"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zci-IX-DJC" secondAttribute="trailing" id="GrV-hb-T6v"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gJ0-wW-izK" secondAttribute="bottom" constant="100" id="I47-zI-LR7"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Pc2-Nc-l11" secondAttribute="bottom" constant="100" id="SQo-V5-hTa"/>
-                            <constraint firstItem="gJ0-wW-izK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hDk-kb-F38"/>
+                            <constraint firstItem="jFq-cY-i16" firstAttribute="top" relation="greaterThanOrEqual" secondItem="tWu-WC-BTu" secondAttribute="bottom" constant="20" id="G4x-Ea-rnQ"/>
+                            <constraint firstItem="W2g-m5-N9S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hGZ-Ul-AMd"/>
                             <constraint firstItem="tWu-WC-BTu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jML-dq-QBq"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zci-IX-DJC" secondAttribute="bottom" constant="100" id="ms6-1Z-JXK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="W2g-m5-N9S" secondAttribute="bottom" constant="90" id="kXL-Pl-bUu"/>
                             <constraint firstItem="jFq-cY-i16" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rMu-k5-ETw"/>
-                            <constraint firstItem="zci-IX-DJC" firstAttribute="leading" secondItem="gJ0-wW-izK" secondAttribute="trailing" constant="39.333333333333343" id="sqh-Oc-A6W"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="G4x-Ea-rnQ"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="opponentImageView" destination="tWu-WC-BTu" id="g89-Ca-w9t"/>
@@ -94,9 +107,4 @@
             <point key="canvasLocation" x="138" y="4"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>
